@@ -1,0 +1,35 @@
+.container {
+  max-width: 800px;
+  margin: 32px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.nav__link {
+  display: block;
+}
+
+.header__text {
+  font: 85px sans-serif;
+  fill: red;
+  animation-name: spin;
+  transform-origin: center;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  cursor: default;
+}
+
+.header:hover .header__text {
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
