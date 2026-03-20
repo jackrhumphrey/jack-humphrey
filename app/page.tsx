@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from "next/link";
 
 export default function Home() {
@@ -38,4 +39,10 @@ export default function Home() {
       <main>Descripton</main>
     </div>
   );
+=======
+"use client";
+
+export default function Page() {
+  return "Under construction";
+>>>>>>> 5f4cdbf (Initial commit from Create Next App)
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./modern-normalize.css";
@@ -10,6 +11,23 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+=======
+import { StrictMode } from "react";
+import type { Metadata } from "next";
+import { Tilt_Warp, Roboto } from "next/font/google";
+import Header from "./header";
+import "./modern-normalize.css";
+import "./globals.css";
+
+const tiltWarp = Tilt_Warp({
+  variable: "--font-tilt-warp",
+  axes: ["XROT", "YROT"],
+  subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+>>>>>>> 5f4cdbf (Initial commit from Create Next App)
   subsets: ["latin"],
 });
 
@@ -24,9 +42,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
+=======
+      <StrictMode>
+        <body className={`${tiltWarp.variable} ${roboto.variable}`}>
+          <div className="container">
+            <Header />
+            <main className="main">{children}</main>
+          </div>
+        </body>
+      </StrictMode>
+>>>>>>> 5f4cdbf (Initial commit from Create Next App)
     </html>
   );
 }

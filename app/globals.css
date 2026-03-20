@@ -1,13 +1,47 @@
+<<<<<<< HEAD
 .container {
   max-width: 800px;
   margin: 32px;
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+=======
+body {
+  background: #ffccbc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 32px;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 64px;
+  @media screen and (max-width: 828px) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  font-family: var(--font-roboto);
+}
+
+.main {
+  padding-top: 48px;
+  @media screen and (max-width: 828px) {
+    padding: 0;
+  }
+  font-size: 24px;
+  color: #212121;
+}
+
+.nav {
+  text-align: right;
+  margin: 32px;
+  margin-bottom: 0;
+>>>>>>> 5f4cdbf (Initial commit from Create Next App)
 }
 
 .nav__link {
   display: block;
+<<<<<<< HEAD
 }
 
 .header__text {
@@ -22,6 +56,49 @@
 }
 
 .header:hover .header__text {
+=======
+  padding: 2px 32px;
+  font: 60px var(--font-tilt-warp);
+  color: #303f9f;
+  text-decoration: none;
+  &:hover {
+    font-variation-settings:
+      "XROT" var(--xrot),
+      "YROT" var(--yrot);
+    @media (prefers-reduced-motion: reduce) {
+      font-variation-settings:
+        "XROT" 0,
+        "YROT" 0;
+    }
+  }
+}
+
+.nav__link--current {
+  color: #1976d2;
+  cursor: default;
+}
+
+.heading {
+  margin: 0;
+}
+
+.heading__svg {
+  display: block;
+}
+
+.heading__text {
+  font: 135px var(--font-tilt-warp);
+  fill: #00897b;
+  animation: spin 7s linear infinite;
+  transform-origin: center;
+  cursor: default;
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+.heading:hover .heading__text {
+>>>>>>> 5f4cdbf (Initial commit from Create Next App)
   animation-play-state: paused;
 }
 
