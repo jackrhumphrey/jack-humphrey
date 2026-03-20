@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-.container {
-  max-width: 800px;
-  margin: 32px;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-=======
 body {
   background: #ffccbc;
 }
@@ -36,27 +28,10 @@ body {
   text-align: right;
   margin: 32px;
   margin-bottom: 0;
->>>>>>> 5f4cdbf (Initial commit from Create Next App)
 }
 
 .nav__link {
   display: block;
-<<<<<<< HEAD
-}
-
-.header__text {
-  font: 85px sans-serif;
-  fill: red;
-  animation-name: spin;
-  transform-origin: center;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  cursor: default;
-}
-
-.header:hover .header__text {
-=======
   padding: 2px 32px;
   font: 60px var(--font-tilt-warp);
   color: #303f9f;
@@ -98,7 +73,6 @@ body {
 }
 
 .heading:hover .heading__text {
->>>>>>> 5f4cdbf (Initial commit from Create Next App)
   animation-play-state: paused;
 }
 
