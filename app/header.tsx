@@ -20,7 +20,7 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className="header">
       <h1 className="heading">
         <span className="visually-hidden">Jack Humphrey</span>
         <svg className="heading__svg" viewBox="0 0 500 500">

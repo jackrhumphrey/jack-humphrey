@@ -2,55 +2,94 @@ body {
   background: #ffccbc;
 }
 
+p {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
 .container {
   max-width: 1200px;
-  margin: 32px;
+  padding: 32px;
   display: grid;
   grid-template-columns: 350px 1fr;
   gap: 64px;
-  @media screen and (max-width: 828px) {
+  @media (max-width: 828px) {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  font-family: var(--font-roboto);
+  @media (max-width: 414px) {
+    padding: 8px;
+    gap: 16px;
+  }
 }
 
 .main {
-  padding-top: 48px;
-  @media screen and (max-width: 828px) {
+  padding-top: 80px;
+  font: 23px/1.45 var(--font-inter);
+  color: #212121;
+  @media (max-width: 828px) {
     padding: 0;
   }
-  font-size: 24px;
-  color: #212121;
+  @media (max-width: 414px) {
+    font-size: 19px;
+    padding: 0px 16px;
+  }
+}
+
+.main a {
+  color: #283593;
+  &:hover {
+    color: #3f51b5;
+    text-decoration: none;
+  }
 }
 
 .nav {
   text-align: right;
   margin: 32px;
   margin-bottom: 0;
+  @media (max-width: 828px) {
+    text-align: left;
+    margin: 0;
+    margin-top: 32px;
+  }
+  @media (max-width: 414px) {
+    margin: 16px;
+    margin-bottom: 0;
+  }
 }
 
 .nav__link {
   display: block;
-  padding: 2px 32px;
-  font: 60px var(--font-tilt-warp);
-  color: #303f9f;
   text-decoration: none;
+  padding: 2px 32px;
+  padding-left: 0;
+  font: 60px var(--font-tilt-warp);
+  color: #283593;
   &:hover {
     font-variation-settings:
       "XROT" var(--xrot),
       "YROT" var(--yrot);
-    @media (prefers-reduced-motion: reduce) {
+    @media (prefers-reduced-motion: reduce), (pointer: coarse) {
       font-variation-settings:
         "XROT" 0,
         "YROT" 0;
     }
+  }
+  @media (max-width: 414px) {
+    font-size: 40px;
+    padding: 0;
   }
 }
 
 .nav__link--current {
   color: #1976d2;
   cursor: default;
+  position: relative;
+  transform: translate(8px);
+  @media (max-width: 828px) {
+    transform: translate(0);
+  }
 }
 
 .heading {
@@ -73,7 +112,9 @@ body {
 }
 
 .heading:hover .heading__text {
-  animation-play-state: paused;
+  @media (pointer: fine) {
+    animation-play-state: paused;
+  }
 }
 
 @keyframes spin {

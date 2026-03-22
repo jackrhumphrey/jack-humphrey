@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Tilt_Warp, Roboto } from "next/font/google";
+import { Tilt_Warp, Inter } from "next/font/google";
 import Header from "./header";
 import "./modern-normalize.css";
 import "./globals.css";
@@ -10,8 +10,8 @@ const tiltWarp = Tilt_Warp({
   subsets: ["latin"],
 });
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${tiltWarp.variable} ${roboto.variable}`}>
+      <body className={`${tiltWarp.variable} ${inter.variable}`}>
         <div className="container">
           <Header />
           <main className="main">{children}</main>
