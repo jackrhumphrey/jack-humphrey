@@ -3,6 +3,7 @@
 export default function Page() {
   return (
     <>
+      <h2 className="visually-hidden">About</h2>
       <p>
         My name is Jack Humphrey and I am a software developer specialising in
         front-end development. I originally studied Mathematics, and have a

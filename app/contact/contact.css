@@ -1,3 +1,10 @@
+.form {
+  margin-right: 16px;
+  @media (max-width: 1200px) {
+    margin: 0;
+  }
+}
+
 .form--loading {
   opacity: 0.5;
   pointer-events: none;
@@ -9,7 +16,8 @@
 }
 
 .form__error {
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
+  padding: 0px;
 }
 
 .form__input,
@@ -21,8 +29,9 @@
   background: #fafafa;
   padding: 0.3em 0.5em;
   border: 2px solid #424242;
+  border-radius: 8px;
   line-height: 1.45;
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
   &:focus {
     outline: 2px solid #424242;
     outline-offset: 2px;
@@ -31,4 +40,5 @@
 
 .form__button {
   cursor: pointer;
+  margin-top: 1em;
 }

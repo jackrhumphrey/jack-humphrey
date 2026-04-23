@@ -1,0 +1,30 @@
+.work__image-link {
+  display: block;
+  margin-right: 16px;
+  @media (max-width: 1200px) {
+    margin: 0;
+  }
+}
+
+.work__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.work__description {
+  padding: 2px;
+}
+
+.work__header {
+  font-size: 1em;
+  margin: 1em 0;
+  margin-bottom: 0.75em;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  a {
+    font-size: 1.2em;
+  }
+}

@@ -4,7 +4,7 @@ body {
 
 p {
   margin: 0;
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
 }
 
 .container {
@@ -24,7 +24,7 @@ p {
 }
 
 .main {
-  padding-top: 96px;
+  padding: 96px 0;
   padding-right: 16px;
   font: 23px/1.45 var(--font-inter);
   color: #212121;
@@ -39,13 +39,14 @@ p {
 
 .main a {
   color: #283593;
+  text-decoration: none;
   &:hover {
     color: #3f51b5;
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 
-.nav {
+.header__nav {
   text-align: right;
   margin: 32px;
   margin-bottom: 0;
@@ -60,7 +61,7 @@ p {
   }
 }
 
-.nav__link {
+.header__nav-link {
   display: block;
   text-decoration: none;
   padding: 2px 32px;
@@ -83,7 +84,7 @@ p {
   }
 }
 
-.nav__link--current {
+.header__nav-link--current {
   color: #1976d2;
   cursor: default;
   position: relative;
@@ -93,15 +94,20 @@ p {
   }
 }
 
-.heading {
+.header__sticky {
+  position: sticky;
+  top: 32px;
+}
+
+.header__heading {
   margin: 0;
 }
 
-.heading__svg {
+.header__heading-svg {
   display: block;
 }
 
-.heading__text {
+.header__heading-text {
   font: 135px var(--font-tilt-warp);
   fill: #00897b;
   animation: spin 7s linear infinite;
@@ -112,7 +118,7 @@ p {
   }
 }
 
-.heading:hover .heading__text {
+.header__heading:hover .header__heading-text {
   @media (pointer: fine) {
     animation-play-state: paused;
   }

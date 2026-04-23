@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+
 import { Tilt_Warp, Inter } from "next/font/google";
 import Header from "./header";
 import "./modern-normalize.css";
@@ -28,6 +30,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${tiltWarp.variable} ${inter.variable}`}>
+        <div style={{ display: "none" }}>
+          <Image
+            src="/colour.png"
+            alt="Preload"
+            width={1200}
+            height={872}
+            priority
+          />
+        </div>
         <div className="container">
           <Header />
           <main className="main">{children}</main>
